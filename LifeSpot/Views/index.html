@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <p>Приветствуем на LifeSpot!</p>
+    <header>
+        <div>
+            <h>LifeSpot — прямые трансляции с улиц</h>
+            <p>Прямой эфир прямо сейчас</p>
+        </div>
+        <div>
+            <input name="finder" type="text" />
+        </div>
+    </header>
+    <aside id="sidebar">
+        <div class="navbar">
+            <a href="/"><p>Все трансляции</p></a>
+            <a href="/"><p>О проекте</p></a>
+        </div>
+    </aside>
+        <!--St.Peteburg-->
+        <div class="video-container">
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-18901857&id=456256721&hash=5b8cd5015970317b" name="peterburg" width="560" height="315" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media;gyroscope; fullscreen; picture-in-picture"></iframe>
+            <h3>
+                Дворцовый мост в Петербурге
+            </h3>
+        </div>
+        <!--Moscow-->
+        <div class="video-container">
+            <iframe src="https://vk.com/video_ext.php?oid=-106879986&id=456256058&hash=2de308e78735c0e1" name="moscow" width="560" height="315" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media;gyroscope; fullscreen; picture-in-picture"></iframe>
+            <h3>
+                Вид на Москву
+            </h3>
+        </div>
+    <footer>
+        <p>LifeSpot - все права защищены</p>
+        <p>Связаться с нами: contact@lifespot.ru</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,65 @@
+﻿/* Комбинированный селектор - применяется ко всем элементам */
+header, footer, aside, body, .navbar, .video-container {
+    font-family: "Helvetica 65 Medium", sans-serif;
+}
+
+/* Простые селекторы*/
+.video-container {
+    display: block;
+    position: absolute;
+}
+
+.navbar {
+    color: whitesmoke;
+    padding-left: 15%;
+}
+
+/*Глобальные стили для хедеров на всём сайте*/
+header {
+    width: 100%;
+    color: black;
+    background-color: whitesmoke;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: medium;
+    color: dimgrey;
+    line-height: 66% ;
+    margin-top: auto;
+    padding-left: 1%;
+}
+
+aside {
+    height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
+    width: 10%;
+    position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+    top: 0; /* Сайдбар будет в самой верхней части страницы */
+    left: 0;
+    background-color: #111; /* Черный цвет фона (задан в виде кода) */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    padding-top: 2%;
+    font-size: large;
+}
+
+body {
+    padding-left: 11%;
+    background-color: burlywood;
+}
+
+/* Стили панели навигации */
+.navbar p {
+    color: darkgray;
+    padding-left: 15%;
+}
+    /* Стили панели навигации при наведении мышью */
+    .navbar p:hover {
+        color: aliceblue;
+    }
+
+input{
+    color: black;
+    background-color: white;
+}
