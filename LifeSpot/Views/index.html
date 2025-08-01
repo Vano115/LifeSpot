@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
+    <!--Подключение стилей по отностиельному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+
+    <!--Подключение скриптов-->
+    <script src="../Static/JS/index.js">
+    </script>
+
+    <!--Скрипт проверки возраста и информация о сессии-->
+    <script>
+        let session = new Map();
+        //ageChecker();
+        handleSession();
+        sessionLog();
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш GitHub"),
+            30000);
+
+        // Функция объявлена через declaration
+        var inputFunc = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+
+    </script>
 </head>
+
+<!--Хедер страницы находится над тегом body-->
+<header id="header-index">
+    <!--Заголовок страницы-->
+    <h1>LifeSpot - прямые трансляции с улиц</h1>
+    <!--Параграф-->
+    <p>Покажем, что происходит прямо сейчас</p>
+    <input type="text" oninput=" finderFilter()" size="50%">
+</header>
+
 <body>
-    <header>
-        <div>
-            <h>LifeSpot — прямые трансляции с улиц</h>
-            <p>Прямой эфир прямо сейчас</p>
-        </div>
-        <div>
-            <input name="finder" type="text" />
-        </div>
-    </header>
-    <aside id="sidebar">
-        <div class="navbar">
-            <a href="/"><p>Все трансляции</p></a>
-            <a href="/"><p>О проекте</p></a>
-        </div>
-    </aside>
-        <!--St.Peteburg-->
+    <div class="bordered">
         <div class="video-container">
-            <iframe src="https://vkvideo.ru/video_ext.php?oid=-18901857&id=456256721&hash=5b8cd5015970317b" name="peterburg" width="560" height="315" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media;gyroscope; fullscreen; picture-in-picture"></iframe>
-            <h3>
-                Дворцовый мост в Петербурге
-            </h3>
+            <iframe src="https://vk.com/video_ext.php?oid=-106879986&id=456256058&hash=2de308e78735c0e1" name="moscow" width="560" height="315" frameborder="0" allowfullscreen="0" allow="autoplay; encrypted-media;gyroscope; fullscreen; picture-in-picture"></iframe>
+            <h3>Вид на Москву</h3>
         </div>
-        <!--Moscow-->
         <div class="video-container">
-            <iframe src="https://vk.com/video_ext.php?oid=-106879986&id=456256058&hash=2de308e78735c0e1" name="moscow" width="560" height="315" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media;gyroscope; fullscreen; picture-in-picture"></iframe>
-            <h3>
-                Вид на Москву
-            </h3>
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-18901857&id=456256721&hash=5b8cd5015970317b" name="peterburg" width="560" height="315" frameborder="0" allowfullscreen="0" allow="autoplay; encrypted-media;gyroscope; fullscreen; picture-in-picture"></iframe>
+            <h3>Дворцовый мост в Петербурге</h3>
         </div>
-    <footer>
-        <p>LifeSpot - все права защищены</p>
-        <p>Связаться с нами: contact@lifespot.ru</p>
-    </footer>
+    </div>
+
+    <!--SIDEBAR-->
 </body>
+
+<!--Футер страницы находится под основной частью (body)-->
+<!--FOOTER-->
 </html>
